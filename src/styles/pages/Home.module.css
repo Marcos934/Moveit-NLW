@@ -16,3 +16,19 @@
     align-content: center;
     
 }
+
+
+
+
+@media(max-width:600px) {
+    .container  section {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 1.25rem;
+        align-content: center;
+        grid-auto-flow: initial;
+        
+    }
+
+}

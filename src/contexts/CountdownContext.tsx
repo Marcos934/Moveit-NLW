@@ -22,12 +22,12 @@ let countdownTimeout: NodeJS.Timeout;
 
 export function CountdownProvider({children}: CountdownProviderProps ){
 
-
+    const TempoMinuto = 0.5;
     const {startNewChallenge} = useContext(ChallengesContext);
   
 
 
-    const [time, setTime] = useState(1 * 60) // Definido estado inicial do Countdown.
+    const [time, setTime] = useState( TempoMinuto * 60) // Definido estado inicial do Countdown.
     const [isActive, setIsactive] =  useState(false) // Ativador do Countdown iniciado em Falso.
     const [hasFinished, setHasFinished] =  useState(false);
     const minutes = Math.floor(time / 60); // Definido Minutos (Time/60) -> Arredondando ao valor de inteiro.
@@ -42,7 +42,7 @@ export function CountdownProvider({children}: CountdownProviderProps ){
     function resetCountdown(){
         clearTimeout(countdownTimeout);
         setIsactive(false);
-        setTime(0.05 * 60);
+        setTime( TempoMinuto * 60);
         setHasFinished(false);
 
     }

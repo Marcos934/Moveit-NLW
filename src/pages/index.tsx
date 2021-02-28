@@ -36,7 +36,6 @@ export default function Home(props: HomeProps) {
 
             <div>
               <ChallengeBox />
-
             </div>
           </section>
         </CountdownProvider>
